@@ -42,13 +42,14 @@ namespace Repeate
                     Console.WriteLine("Your message: ");
                     string messages = Console.ReadLine();
 
-                    Message m1 = new Message("Hello", "John", DateTime.Now);
+                    Message m1 = new Message(messages, authorn, DateTime.Now);
                     m1.AddLike();
                     m1.ShowInfo(m1);
                 };
 
-                //Console.WriteLine(m1.Popularity(m1.GetPopularity(), m2.GetPopularity()));
-                //Console.WriteLine(m1.PopularityN(mes));
+                Console.WriteLine(m2.Popularity(m2.GetPopularity(), m2.GetPopularity()));
+                Console.WriteLine(m2.PopularityN(mes));
+
             }
         }
     }

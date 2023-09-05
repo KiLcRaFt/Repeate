@@ -31,7 +31,8 @@ namespace Repeate
 
             public void AddLike()
             {
-                _likes++;
+                Random rnd = new Random();
+                _likes += rnd.Next(1, 5);
             }
 
             public double GetPopularity()
@@ -46,6 +47,7 @@ namespace Repeate
             }
             public void ShowInfo(Message x)
             {
+                
                 Console.WriteLine("Message: " + x.Content);
                 Console.WriteLine("Author: " + x.Author);
                 Console.WriteLine("Time: " + x.Time);
@@ -75,8 +77,8 @@ namespace Repeate
                 for (int i = 0; i < mes.Count; i++) 
                 { 
                     if (mes[i].GetPopularity()>=popularity)
-                    { 
-                        
+                    {
+                        ans = mes[i].Content;
                     }
                 }
                 return ans;
